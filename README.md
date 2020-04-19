@@ -2,9 +2,6 @@
 
 ## YAML definition
 
-YAML
-
-
 Kind	| Version
 --- | ---
 POD	| v1
@@ -31,3 +28,4 @@ Namespace  | v1
   - dev: namespace
   - svc : per services
   - cluster.local : default domain
+## ResourceQuota
