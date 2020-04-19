@@ -9,6 +9,8 @@ Service | v1
 ReplicaSet | apps/v1
 Deployment | apps/v1
 Namespace  | v1
+ResourceQuota | v1
+
 
 ## PODs
    - create a pod with run command: 
