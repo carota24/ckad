@@ -25,3 +25,8 @@ Deployment | apps/v1
 ## Deployment
   - Create deployment 
   <code> kubectl create deployment --image=nginx nginx</code>
+## DNS
+  service1.dev.svc.cluster.local 
+  - dev: namespace
+  - svc : per services
+  - cluster.local : default domain
