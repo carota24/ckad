@@ -49,3 +49,4 @@ spec:
     image: nginx
     imagePullPolicy: IfNotPresent
 ```
+The new node affinity syntax supports the following operators: In, NotIn, Exists, DoesNotExist, Gt, Lt
