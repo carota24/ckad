@@ -7,4 +7,7 @@ The taint has key key, value value, and taint effect NoSchedule.
 
 This means that no pod will be able to schedule onto node1 unless it has a matching toleration.
 
-Note: Taint is the opposite of NodeAffinity
+Note: Taint is the opposite of NodeAffinity,
+however it does not guarantee that the pod to run in a particular node, it is the opposite logic,
+you basically prevent a pod to run on a particular node.
+
