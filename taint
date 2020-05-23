@@ -12,6 +12,9 @@ however it does not guarantee that the pod to run in a particular node, it is th
 you basically prevent a pod to run on a particular node, since it tells a node to accept pods that 
 have only a particular tolleration
 
+One example of usage: by default the master nodes have the taint "NoSchedule" applied
+
+
 
 apiVersion: v1
 kind: Pod
