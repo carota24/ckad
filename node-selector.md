@@ -6,7 +6,7 @@ kubectl label nodes node01 size=small
 
 now that we have label the node we can assig node-selector
 
----
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -20,6 +20,9 @@ spec:
     imagePullPolicy: IfNotPresent
   nodeSelector:
     size: small
+```
+
+
 *** NodeSelector are limited because we cannot provide complex expressions like 
 "Size NOT small" or
 "Size Medium or Large"
