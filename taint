@@ -1,5 +1,7 @@
 kubectl taint nodes node1 key=value:NoSchedule
 
+Taint-effect: NoSchedule,PreferNoSchedule, NoExecute
+
 places a taint on node node1.
 The taint has key key, value value, and taint effect NoSchedule. 
 
