@@ -1,0 +1,22 @@
+first we need to label a node
+```
+kubectl label nodes <nodename> key=value
+kubectl label nodes node01 size=small
+```
+
+now that we have label the node we can assig node-selector
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  nodeSelector:
+    size: small
