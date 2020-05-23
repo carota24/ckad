@@ -20,3 +20,27 @@ spec:
     imagePullPolicy: IfNotPresent
   nodeSelector:
     size: small
+*** NodeSelector are limited because we cannot provide complex expressions like 
+"Size NOT small" or
+"Size Medium or Large"
+
+For this we can use NodeAffinity
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd            
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
