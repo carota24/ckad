@@ -29,6 +29,7 @@ spec:
 
 For this we can use NodeAffinity
 
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -47,3 +48,4 @@ spec:
   - name: nginx
     image: nginx
     imagePullPolicy: IfNotPresent
+```
