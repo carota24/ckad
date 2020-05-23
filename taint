@@ -9,5 +9,23 @@ This means that no pod will be able to schedule onto node1 unless it has a match
 
 Note: Taint is the opposite of NodeAffinity,
 however it does not guarantee that the pod to run in a particular node, it is the opposite logic,
-you basically prevent a pod to run on a particular node.
+you basically prevent a pod to run on a particular node, since it tells a node to accept pods that 
+have only a particular tolleration
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  tolerations:
+  - key: "example-key"
+    operator: "Exists"
+    effect: "NoSchedule"
 
