@@ -6,6 +6,12 @@ places a taint on node node1.
 The taint has key key, value value, and taint effect NoSchedule. 
 
 This means that no pod will be able to schedule onto node1 unless it has a matching toleration.
+<b>Taints prevents other pods to run on the marked nodes if they do not have the right tolleration, 
+however taints and tollerations does not guarantie that the pods will only prefers these nodes</b>
+
+NodeAffinity will mark some nodes, and the pods with nodeaffinity will run on these nodes, however it 
+does not guarantee that other pods without nodeaffinity will not run on these nodes.
+
 
 Note: Taint is the opposite of NodeAffinity,
 however it does not guarantee that the pod to run in a particular node, it is the opposite logic,
